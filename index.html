@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" http-equiv="Content-Type" content="text/html;charset=windows-1251" />
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+function hideNoDHTML()
+{
+document.getElementById('nodhtml').style.display = 'none';
+showQuestions();
+}
+     
+function showQuestions()
+{
+  document.getElementById('questions').style.display = 'block';
+  document.getElementById('results').style.display = 'none'; 
+}
+function showResults()
+{
+
+var i = 0;
+if(document.getElementById('choice1').checked == true)
+{
+i++;
+}
+if(document.getElementById('choice4').checked == true)
+{
+i++;
+}
+if(document.getElementById('choice7').checked == true)
+{
+i++;
+}
+if(document.getElementById('choice10').checked == true)
+{
+i++;
+}
+if(document.getElementById('choice13').checked == true)
+{
+i++;
+}
+if(document.getElementById('choice16').checked == true)
+{
+i++;
+}
+if(document.getElementById('choice19').checked == true)
+{
+i++;
+}
+if(document.getElementById('choice22').checked == true)
+{
+i++;
+}
+                    
+document.getElementById('questions').style.display = 'none';
+document.getElementById('results').style.display = 'block';
+
+document.getElementById('results').innerHTML = '<h2>Результаты теста </h2>\n<p>Вы ответили правильно: <strong>' + i + '</strong> раз </p>';
+
+if(i >=3) 
+{
+document.getElementById('results').innerHTML += '<p>У вас нет дальтонизма!</p>';
+}
+if(i <= 2) 
+{
+document.getElementById('results').innerHTML += '<p> У вас есть нарушение зрения, обратитесь к врачу!</p>';
+}
+} 
+</script>
+</head>
+<body>
+    
+    <form>
+        <div>
+          <p>Форма Регистарции<p>
+          <label for="email">
+          <b>Почта</b>
+          </label>
+          <input type="text" placeholder="Введите email" name="email" required>
+          <hr>
+          <label for="password">
+          <b>Пароль</b>
+          </label>
+          <input type="password" placeholder="Введите пароль" name="password" required>
+          <hr>
+          <label for="password_repeat">
+          <b>Repeat Password</b>
+          </label>
+          <input type="Повторите пароль" placeholder="Повторите пароль" name="password_repeat" required>
+          <hr>
+          <label>
+            <b>Я соглашаюсь на обработку моих данных</b>
+          </label>
+          <input type="radio" id="radioButton">
+          <hr>
+          <button type="submit" class="registr">Зарегистрироваться</button>
+        </div>
+      </form>
+
+      
+
+<div id="nodhtml"></div>
+<div id="questions">
+<h1>Тест На дальтонизм</h1>
+
+<form action="">
+    <p>Вопрос 1</p><img src="picture/test1.png">
+<p><input type="radio" name="question1" id="choice1" required/> <label for="choice11">96</label></p>
+<p><input type="radio" name="question1" id="choice2" required/> <label for="choice12">9</label></p>
+<p><input type="radio" name="question1" id="choice3" required/> <label for="choice13">5</label></p>
+
+<p>Вопрос 2</p><img src="picture/test2.png">
+<p><input type="radio" name="question2" id="choice4" /> <label for="choice21">Треугольник и круг</label></p>
+<p><input type="radio" name="question2" id="choice5" /> <label for="choice22">Треуголбник</label></p>
+<p><input type="radio" name="question2" id="choice6" /> <label for="choice23">Круг</label></p>
+
+<p>Вопрос 3</p><img src="picture/test3.png">
+<p><input type="radio" name="question3" id="choice7" /> <label for="choice31">5</label></p>
+<p><input type="radio" name="question3" id="choice8" /> <label for="choice32">9</label></p>
+<p><input type="radio" name="question3" id="choice9" /> <label for="choice33">Ничего не вижу</label></p>
+
+
+<p>Вопрос 4</p><img src="picture/test4.png">
+<p><input type="radio" name="question4" id="choice10" /> <label for="choice41">Треугольник</label></p>
+<p><input type="radio" name="question4" id="choice11" /> <label for="choice42">Круг</label></p>
+<p><input type="radio" name="question4" id="choice12" /> <label for="choice43">9</label></p>
+
+
+<p>Вопрос 5</p><img src="picture/test5.png">
+<p><input type="radio" name="question5" id="choice13" /> <label for="choice51">13</label></p>
+<p><input type="radio" name="question5" id="choice14" /> <label for="choice52">6</label></p>
+<p><input type="radio" name="question5" id="choice15" /> <label for="choice53">Ничего не вижу</label></p>
+
+
+<p>Вопрос 6</p><img src="picture/test6.png">
+<p><input type="radio" name="question6" id="choice16" /> <label for="choice61">Треугольник и круг</label></p>
+<p><input type="radio" name="question6" id="choice17" /> <label for="choice62">Треуголбник</label></p>
+<p><input type="radio" name="question6" id="choice18" /> <label for="choice63">Круг</label></p>
+
+
+<p>Вопрос 7</p><img src="picture/test7.png">
+<p><input type="radio" name="question7" id="choice19" /> <label for="choice71">96</label></p>
+<p><input type="radio" name="question7" id="choice20" /> <label for="choice72">9</label></p>
+<p><input type="radio" name="question7" id="choice21" /> <label for="choice73">6</label></p>
+
+
+<p>Вопрос 8</p><img src="picture/test8.png">
+<p><input type="radio" name="question8" id="choice22" /> <label for="choice81">5</label></p>
+<p><input type="radio" name="question8" id="choice23" /> <label for="choice82">6</label></p>
+<p><input type="radio" name="question8" id="choice24" /> <label for="choice83">Ничего не видно</label></p>
+
+
+<p class="buttons"><input type="button" value="Показать результат" onclick="showResults();" /> <input type="reset" value="Очистить форму" /></p>
+</form>
+</div>
+<div id='results'></div>
+<br/><br/> 
+</body>
+</html>
